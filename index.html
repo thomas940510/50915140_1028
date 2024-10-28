@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打磚塊遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>打磚塊遊戲</h1>
+    <div>
+        <label for="backgroundSelect">選擇背景主題：</label>
+        <select id="backgroundSelect" onchange="changeBackground()">
+            <option value="default">默認</option>
+            <option value="night-sky">夜空</option>
+            <option value="forest">森林</option>
+            <option value="ocean">海洋</option>
+        </select>
+    </div>
+    <div>
+        <label for="difficulty">選擇難度：</label>
+        <select id="difficulty" onchange="setDifficulty()">
+            <option value="easy">簡單</option>
+            <option value="medium">中等</option>
+            <option value="hard">困難</option>
+        </select>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+
+    <button id="startButton" onclick="startGame()">開始遊戲</button>
+    <audio id="backgroundMusic" src="https://www.soundjay.com/free-music/heart-of-the-sea-01.mp3" loop></audio>
+    <audio id="hitSound" src="https://taira-komori.jpn.org/sound_os2/attack01/damage2.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
